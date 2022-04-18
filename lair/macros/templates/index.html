@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+   {% if public_macros_list %}
+    <ul>
+    {% for macro in public_macros_list %}
+        <li><a href="/macros/id/{{ macro.id }}/code">{{ macro.alias }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No macros are available.</p>
+{% endif %} 
+  </body>
+</html>
+
